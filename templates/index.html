@@ -1,43 +1,47 @@
-<!DOCTYPR html>
+<!DOCTYPE html>
 <html>
 	<head>
-		<title>Andrea Delgado</title>
-		<link rel="stylesheet" 
-		href="static/css/style.css">
+		<title>Andrea Delgado Web Page</title>
+		<link rel="stylesheet" href="../static/css/style.css">
 		<link rel="stylesheet"
 		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 	</head>
+
+	<script src="../script.js"></script>
 	<body>
-		<h1 class="intro">Andrea Delgado</h1>
+
 
 		<nav class="navigation_bar">
+			<img class="logo" src="../static/images/ad_logo.png" alt="Andrea Delgado Logo"></img>
 			<div class="menu_items">
-				<a href="#about" class="active">About Me</a>
-				<a href="#skills">Skills</a>
-				<a href="#projects">Projects</a>
-				<a href="#download_cv">Download CV</a>
-				<a href="#contact_me">Contact Me</a>
+				<a class="menuItem active" href="#about">About Me</a>
+				<a class="menuItem" href="#skills">Skills</a>
+				<a class="menuItem" href="#projects">Projects</a>
+				<a class="menuItem" href="#download_cv">Download CV</a>
+				<a class="menuItem" href="#contact_me">Contact Me</a>
 			</div>
 		</nav>
 
 
 		<section id="about">
-			<h1>About me</h1>
-				<p>
-					<div class="hello"> Hello, </div><br>
-					<div class="introIm"> I'm </div><br>
-					<div class="introName"> Andrea Delgado <br> Software Developer</div><br>
+			<!-- <h1>About me</h1> -->
 					<div class="introText">
-					I have a degree in Agribusiness Engineering, which means my career path somehow went from Food Supply Chains to Algorithms and Software Development.
-					The curiosity led me into the world of Computer Science and Software Development, where I discovered a passion for building solutions, learning new technologies, and continuously improving my skills. <br><br>
-					Today, I'm focused on combining my industry knowledge with technology to help organizations streamline processes, improve efficiency, and create meaningful impact. I'm excited to continue growing as a developer
-					and am always open to new opportunities, challenges, and collaborations.
-					</div><br><br>
-				<button>Hire me!</button>
+						<span class="hello"> Hello, </span><br>
+						<span class="introIm"> I'm </span>
+						<span class="introName1"> Andrea Delgado <br> </span><br>
+						<span class="introskills">Software Developer | Computer Science Graduate Diploma | Montreal, QC</span><br><br>
+						<p class="introMessage">
+						I have a degree in Agribusiness Engineering, which means my career path somehow went from Food Supply Chains to Algorithms and Software Development.
+						The curiosity led me into the world of Computer Science and Software Development, where I discovered a passion for building solutions, learning new technologies, and continuously improving my skills. <br><br>
+						Today, I'm focused on combining my industry knowledge with technology to help organizations streamline processes, improve efficiency, and create meaningful impact. I'm excited to continue growing as a developer
+						and am always open to new opportunities, challenges, and collaborations.
+						</p><br><br>
+					</div>
+				<!-- <button>Hire me!</button> -->
 		</section>
 
 		<section id="skills">
-			<h1>Skills and Technologies</h1>
+			<h1>Skills & Technologies</h1>
 				<p>I enjoy learning new technologies and continuously expanding my skill set.<br><br>
 					Below are some of the programming languages, frameworks, and tools I've worked with throughout my academic and personal projects. </p>
 			<div class="skills-list">
@@ -56,7 +60,7 @@
 		</section>
 
 		<section id="projects">
-			<h1 class="projectsTitle">My projects</h1>
+			<h1 class="projectsTitle">My Projects</h1>
 			<p> Below you will find a diverse collection of projects, just for educational purposes.</p>
 			<div class="myProjects">
 				<div class="project">
@@ -95,39 +99,30 @@
 		</section>
 
 		<section id="contact_me">
-			<h1>Contact me</h1>
+			<h1>Contact Me</h1>
 			<p> Please fill out the form below so we can discuss any work opportunities.</p>
 			<form class="contactForm" action="#" method="post">
-					<input type="text" class="name" name="name" placeholder="Name" required>
-
-					<br><br>
-
-					<input type="email" class="email" name="email" placeholder="your.email@example.com" required>
-					
-					<br><br>
-
+					<input type="text" class="name" name="name" placeholder="Name" required></input>
+					<input type="email" class="email" name="email" placeholder="your.email@example.com" required></input>
 					<textarea class="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
-
-					<br><br>
-
 					<button type="submit" class="submitButton">Send Message</button>
 			</form>
 		</section>
 		
-	<section>
-		<footer>
-			
-			<div class="social-icons">
-				<a href="https://www.linkedin.com/in/andrea-delgado001" target="_blank">
-					<i class="fa-brands fa-linkedin"></i>
-				</a>
+		<section class="footer">
+			<footer>
+				<div class="social-icons">
+					<a href="https://www.linkedin.com/in/andrea-delgado001" target="_blank">
+						<i class="fa-brands fa-linkedin"></i>
+					</a>
 
-				<a href="https://github.com/andremagda" target="_blank">
-					<i class="fa-brands fa-github"></i>
-				</a>
-			</div>
-			<p>Copyrigth © 2026 Andrea Delgado</p>
-		</footer>
-	</section>
+					<a href="https://github.com/andremagda" target="_blank">
+						<i class="fa-brands fa-github"></i>
+					</a>
+				</div>
+				<p>Copyright © 2026 Andrea Delgado</p>
+			</footer>
+		</section>
+
 	</body>
 </html>

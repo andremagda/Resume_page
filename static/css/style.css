@@ -1,101 +1,160 @@
-.intro { 
-	background: linear-gradient(rgb(241, 62, 80));
-	color: #fff;
-	padding: 20px 20px;
-	text-align: center;
-}
-
-/* ---------------NAVIGATION BAR--------------- */
-nav {
-	width: fit-content;
-	padding: 20px;
-	display: flex;
-	gap: 20px;
-	box-sizing: content-box;
-	border: rgb(241, 42, 62);
-	border-style: solid;
-	border-width: inherit;
-	border-radius: 10px;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 	text-decoration: none;
-	background: transparent;
+	/* background: transparent; */
+	/* font-family: Georgia, 'Times New Roman', Times, serif; */
+	font-family: 'K2D', sans-serif;
 }
-
-.menu_items a{
-	cursor: pointer;
-	text-decoration: none;
-	color: black;
-    border-radius: 5px;
-}
-
-/* part of the menu currently active */
-.menu_items a.active{
-	border-bottom: 3px solid #e40a0a;
-	/* background-color:  #e56a6a; */
-  	color:  #e40a0a;
-}
-
-.menu_items a:visited {
-    color: none;
-}
-
-/* Change the link and background color on hover */ */
-.menu_items:hover:not(.active) {
-	background-color: #e56a6a;
-  	color: white;
-}
-
-
-/* .menu_items a:hover {
-	background-color: #e56a6a;
-    color: white;
-} */
-
-
-/* .nav-container{
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-} */
-
-/* .menu_items {
-	background-color: aliceblue;
-	margin: 0 20px;
-	text-decoration: none;
-	transition: 0.3 linear;
-} */
 
 body {
-	font-family: Georgia;
-	background-color: rgb(239, 177, 183);
-}
-h1 {
-	color: rgb(208, 43, 60);
-	font-family: Georgia;
-	text-align: center;
+	width: 100%;
+	height: 100vh;
+	background-color: rgb(248, 236, 238);
+	/* overflow: hidden; */
+	/* overflow-y: scroll; */
 }
 
-h1 {
-	background:  rgb(243, 201, 205);
+ /* h1 {
+	color: rgb(208, 43, 60);
+	font-family: 'K2D', sans-serif;
+	text-align: center;
+	background:  rgb(237, 175, 181);
 	border-radius: 20px;
 	padding: 10px;
 	margin-bottom: 20px;
 	box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+} */
+
+h1 {
+	text-align: center;
+	font-family: "Playfair Display", serif;
+    font-size: 35px; 
+	font-weight: bold; 
+	color:#222; 
+	letter-spacing: 1px;
+    text-transform: uppercase;
+	display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: 27px 0;
+    grid-gap: 20px;
+    align-items: center;
 }
 
-form{ background:  rgb(243, 201, 205);
-	border-radius: 20px;
-	padding: 20px;
-	margin-bottom: 20px;
-	box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);}
-
-footer{
-	text-align: center;
+h1:after, h1:before {
+    content: " ";
+    display: block;
+    border-bottom: 1px solid rgb(241, 42, 62);
+    border-top: 1px solid rgb(241, 42, 62);
+    height: 5px;
+  	background-color: transparent;
 }
 
 p {
 	text-align: center;
+	width: 90%;
+	margin: auto;
+	padding: 10px;
+	/* font-family: Stencil Std, fantasy; */
+	/* font-family: 'Poppins', sans-serif; */
+	font-family: 'K2D', sans-serif;
+	font-size: 1rem;
+	font-weight: 300;
+}
+
+/* ---------------NAVIGATION BAR--------------- */
+.navigation_bar {
+	width: 100%;
+	height: 100px;
+	margin: auto;
+	display: flex;
+	gap: 50px;
+	/* background: rgb(243, 178, 185);  */
+	 background-color: rgb(243, 201, 205);
+	box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+	text-decoration: none;
+	position: fixed;
+	/* top: 10px; */
+	justify-content: center;
+	z-index: 9999;
+}
+
+.logo {
+    width: 150px;
+}
+
+.menu_items {
+	border: rgb(241, 42, 62);
+	border-style: solid;
+	border-width: auto;
+	border-radius: 10px;
+	font-size: 1.2rem;
+	margin: 20px;
+	padding: 15px;
+	cursor: pointer;
+	transition: 0.3s linear;
+	align-items: center;
+	display: flex;
+	gap: 20px;
+	font-family: 'K2D', sans-serif;
+	font-weight: bolder;
+}
+
+.menu_items a {
+	color: rgb(45, 43, 43);
+}
+
+/* part of the menu currently active */
+.menuItem.active {
+    border-bottom: 3px solid rgb(241, 42, 62);
+    color: rgb(241, 42, 62);
+	border-radius: 3px;
+}
+
+.menu_items a:hover {
+    border-bottom: 3px solid #e40a0a;
+    color: rgb(241, 42, 62);
+	border-radius: 3px;
+}
+
+/* --------------SECTION ABOUT ME-------------- */
+
+#about { 
+	margin-top: 0px;
+	padding-top: 120px;
+}
+
+.introText {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.hello {
+	font-size: 1.75rem;
+	font-weight: 330;
+}
+
+.introIm {
+	font-size: 1.75rem;
+	font-weight: 550;
+}
+
+.introName1 {
+	font-size: 2.5rem;
+	font-weight: bold;
+	font-family: "Playfair Display", serif;
+	color: rgb(241, 42, 62);
+}
+
+.introskills{
+	font-size: 1.2rem;
+	font-weight: 400;
+	text-align: center;
+}
+
+.introMessage{
+	text-align: justify;
 }
 
 	/* --------------SECTION SKILLS-------------- */
@@ -104,19 +163,23 @@ p {
 	flex-wrap: wrap;
 	gap: 15px;
 	justify-content: center;
-	margin: 1.5 rem;
+	margin: 1.5rem;
 	width: auto;
 }
 
 .skill-box {
-	border: 1px solid #ddd;
+	border: 2px solid #c4b2b2;
 	border-radius: 10px;
 	padding: 10px 15px;
-	margin: 0;
+	margin: 0px;
 	width: fit-content;
 	display: flex;
 	align-items: center;
 	gap: 8px;
+	font-family: Stencil Std, fantasy;
+	font-weight: bolder;
+	/* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .skill-box:hover {
@@ -133,7 +196,7 @@ p {
 	max-width: 75rem;
 	padding: 0 1rem;
 	text-align: center;
-	width: 100vw;
+	width: 100%;
 }
 
 .myProjects{
@@ -149,30 +212,29 @@ p {
 }
 
 .project {
-	background:#c4bfc4;
-	border: 2px solid #eb45a9;
+	background: transparent;
+	border: 2px solid rgb(241, 42, 62);
 	border-radius: 8px;
-	color: hsl(0, 85%, 71%);
+	color: hsl(0, 89%, 65%);
 	cursor: pointer;
 	height: 150px;
 	margin: 20px;
 	padding: 0;
 	position: relative;
+	z-index: 1;
 	transition: transform .2s ease-in-out;
 	width: 200px;
 }
 
 .project:hover {
-	transform: translateY(-5px);
-	transform: rotate(5deg);
-
+	transform: translateY(-5px) rotate(5deg);
 }
 
 .projectType {
 	align-self: center;
-	border-bottom: 1px solid #fff;
+	border-bottom: 2px solid #fff;
 	border-bottom-right-radius: 5px;
-	border-right: 1px solid #fff;
+	border-right: 2px solid #fff;
 	font-size: 12px;
 	font-weight: 700;
 	left: 0;
@@ -201,8 +263,8 @@ p {
 .technologies {
 	align-items: center;
 	align-self: center;
-	bottom: 5%;
-	color: #a78bab;
+	bottom: 5%; 
+	color: rgb(235, 123, 134);
 	display: flex;
 	flex-wrap: wrap;
 	font-size: 10px;
@@ -216,26 +278,15 @@ p {
 	padding: 1px 5px;
 }
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	text-decoration: none;
-	background: transparent;
-	font-family: 'K2D', sans-serif;
-}
-
-
 /* -----------------SECTION CONTACT ME---------------- */
-.contact_me {
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	margin: 0 auto;
-	max-width: 75rem;
-	text-align: center;
-	width: 100vw;
+
+form{ 
+	background:  rgb(243, 201, 205);
+	border-radius: 20px;
+	padding: 20px;
+	margin-bottom: 20px;
+	box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+	gap: 10px;
 }
 
 .contactForm{
@@ -243,13 +294,13 @@ p {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	margin: 1rem;
-	max-width: 60 rem;
+	margin: 1rem auto;
+	max-width: 60rem;
 	width: 75vw;
 }
 
 .email, .name, .message{
-	background: #edc8ff;
+	background: rgb(248, 235, 236);
 	border: none;
 	border-radius: .5rem;
 	font-size: medium;
@@ -260,13 +311,19 @@ p {
 }
 
 .submitButton {
-	background: #af38e7;
+	background:rgb(241, 62, 80);
 	border: none;
 	border-radius: 2rem;
 	color: #fff;
-	cursor: pointer;
+	cursor: pointer;	
 	margin: 2rem;
 	padding: 1rem 2rem;
+	font-size: medium;
+}
+
+.footer{
+	text-align: center;
+	gap: 20px;
 }
 
 	/* --------------ORIGINAL COLOR LOGOS-------------- */
@@ -276,12 +333,12 @@ p {
 }
 
 .fa-linkedin {
-    color: #0a66c2; /* LinkedIn blue */
+    color: #0a66c2;
 }
 
 .fa-github {
-    color: #171515; /* GitHub black */
-}
+    color: #171515; 
+} 
 
 .fa-html5 {
     color: #E34F26;
@@ -305,4 +362,4 @@ p {
 
 .fa-github {
     color: #181717;
-}
+} 
