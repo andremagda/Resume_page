@@ -3,8 +3,6 @@
 	padding: 0;
 	box-sizing: border-box;
 	text-decoration: none;
-	/* background: transparent; */
-	/* font-family: Georgia, 'Times New Roman', Times, serif; */
 	font-family: 'K2D', sans-serif;
 }
 
@@ -12,20 +10,12 @@ body {
 	width: 100%;
 	height: 100vh;
 	background-color: rgb(248, 236, 238);
-	/* overflow: hidden; */
-	/* overflow-y: scroll; */
 }
 
- /* h1 {
-	color: rgb(208, 43, 60);
-	font-family: 'K2D', sans-serif;
-	text-align: center;
-	background:  rgb(237, 175, 181);
-	border-radius: 20px;
-	padding: 10px;
-	margin-bottom: 20px;
-	box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
-} */
+section {
+  scroll-margin-top: 120px; /* adjust to navbar height */
+  padding: 100px, 24px;
+}
 
 h1 {
 	text-align: center;
@@ -40,13 +30,14 @@ h1 {
     grid-template-rows: 27px 0;
     grid-gap: 20px;
     align-items: center;
+	margin-top: 50px;
 }
 
 h1:after, h1:before {
     content: " ";
     display: block;
-    border-bottom: 1px solid rgb(241, 42, 62);
-    border-top: 1px solid rgb(241, 42, 62);
+    border-bottom: 1px solid #C60F1B;
+    border-top: 1px solid  #C60F1B;
     height: 5px;
   	background-color: transparent;
 }
@@ -56,11 +47,10 @@ p {
 	width: 90%;
 	margin: auto;
 	padding: 10px;
-	/* font-family: Stencil Std, fantasy; */
-	/* font-family: 'Poppins', sans-serif; */
 	font-family: 'K2D', sans-serif;
-	font-size: 1rem;
+	font-size: 1.1rem;
 	font-weight: 300;
+	line-height: 1.7;
 }
 
 /* ---------------NAVIGATION BAR--------------- */
@@ -70,12 +60,10 @@ p {
 	margin: auto;
 	display: flex;
 	gap: 50px;
-	/* background: rgb(243, 178, 185);  */
-	 background-color: rgb(243, 201, 205);
+	background-color: rgb(243, 201, 205);
 	box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 	text-decoration: none;
 	position: fixed;
-	/* top: 10px; */
 	justify-content: center;
 	z-index: 9999;
 }
@@ -85,7 +73,7 @@ p {
 }
 
 .menu_items {
-	border: rgb(241, 42, 62);
+	border:  #C60F1B;
 	border-style: solid;
 	border-width: auto;
 	border-radius: 10px;
@@ -107,14 +95,14 @@ p {
 
 /* part of the menu currently active */
 .menuItem.active {
-    border-bottom: 3px solid rgb(241, 42, 62);
-    color: rgb(241, 42, 62);
+    border-bottom: 3px solid #C60F1B;
+    color: #C60F1B;
 	border-radius: 3px;
 }
 
 .menu_items a:hover {
-    border-bottom: 3px solid #e40a0a;
-    color: rgb(241, 42, 62);
+    border-bottom: 3px solid  #C60F1B;
+    color:  #C60F1B;
 	border-radius: 3px;
 }
 
@@ -144,7 +132,7 @@ p {
 	font-size: 2.5rem;
 	font-weight: bold;
 	font-family: "Playfair Display", serif;
-	color: rgb(241, 42, 62);
+	color:  #C60F1B;
 }
 
 .introskills{
@@ -213,7 +201,7 @@ p {
 
 .project {
 	background: transparent;
-	border: 2px solid rgb(241, 42, 62);
+	border: 2px solid  #C60F1B;
 	border-radius: 8px;
 	color: hsl(0, 89%, 65%);
 	cursor: pointer;
@@ -311,7 +299,7 @@ form{
 }
 
 .submitButton {
-	background:rgb(241, 62, 80);
+	background: #C60F1B;
 	border: none;
 	border-radius: 2rem;
 	color: #fff;
@@ -363,3 +351,62 @@ form{
 .fa-github {
     color: #181717;
 } 
+
+/* --------------PROJECT CARDS-------------- */
+.project-card {
+  cursor: pointer;
+}
+
+.project-modal {
+	margin: auto;
+  width: min(700px, 90%);
+  max-height: 85vh;
+  padding: 32px;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  background: #C60F1B;
+  overflow-y: auto;
+  text-align: center;
+}
+
+.project-modal::backdrop {
+  background: rgb(0 0 0 / 75%);
+  backdrop-filter: blur(4px);
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  border: none;
+  color: #fff;
+  background: transparent;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.project-gallery {
+  display: grid;
+  justify-content: center;
+  gap: 16px;
+  margin: 24px 0;
+  margin: auto;
+}
+
+.project-gallery img {
+  width: min(300px, 85%);
+  border-radius: 12px;
+  margin: auto;
+  /* display: flex; */
+}
+
+.github-button {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 10px;
+  color: #C60F1B;
+  background: #ffecd5;
+  text-decoration: none;
+  font-weight: 700;
+}

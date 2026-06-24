@@ -7,7 +7,7 @@
 		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 	</head>
 
-	<script src="../script.js"></script>
+	<script src="../script.js" defer></script>
 	<body>
 
 
@@ -62,10 +62,12 @@
 		<section id="projects">
 			<h1 class="projectsTitle">My Projects</h1>
 			<p> Below you will find a diverse collection of projects, just for educational purposes.</p>
+			
 			<div class="myProjects">
-				<div class="project">
+
+				<div class="project" data-modal="hrPlatform-modal">
 					<div class="projectType web"> Web</div>
-					<div class="projectTitle"> HR-Plaftform</div>
+					<div class="projectTitle"> Training Platform</div>
 					<div class="technologies">
 						<span class="technology"> Flask</span>
 						<span class="technology"> SQL</span>
@@ -74,9 +76,10 @@
 					</div>
 				</div>
 	
-				<div class="project">
+				<div class="project" data-modal="volleyball-modal">
 					<div class="projectType web"> Web</div>
-					<div class="projectTitle"> Volley database</div>
+					<div class="projectTitle"> Volleyball Database</div>
+
 					<div class="technologies">
 						<span class="technology"> Java</span>
 						<span class="technology"> SQL</span>
@@ -86,7 +89,7 @@
 					</div>
 				</div>
 			
-				<div class="project">
+				<div class="project" data-modal="carDelership-modal">
 					<div class="projectType web"> Desktop</div>
 					<div class="projectTitle"> Car Dealership</div>
 					<div class="technologies">
@@ -95,13 +98,42 @@
 						<span class="technology"> PHP</span>
 					</div>
 				</div>
+
+				<div class="project" data-modal="cavas-modal">
+					<div class="projectType web">CLI</div>
+					<div class="projectTitle"> Canvas-Polymorphism</div>
+					<div class="technologies">
+						<span class="technology"> C++</span>
+					</div>
+				</div>
+
+				<div class="project" data-modal="textIndexer-modal">
+					<div class="projectType web"> CLI</div>
+					<div class="projectTitle">File Text Indexer</div>
+					<div class="technologies">
+						<span class="technology"> C++</span>
+					</div>
+				</div>
+
+				<!-- <div class="project" data-modal="">
+					<div class="projectType web"> Desktop</div>
+					<div class="projectTitle"> PENDING TO ADD</div>
+					<div class="technologies">
+						<span class="technology"> Java</span>
+						<span class="technology"> SQL</span>
+						<span class="technology"> PHP</span>
+					</div>
+				</div> -->
+
 			</div>
 		</section>
 
 		<section id="contact_me">
 			<h1>Contact Me</h1>
 			<p> Please fill out the form below so we can discuss any work opportunities.</p>
-			<form class="contactForm" action="#" method="post">
+			<form class="contactForm" action="https://formspree.io/f/xwvdvjbz" method="post" action="https://formspree.io/f/xwvdvjbz">
+
+
 					<input type="text" class="name" name="name" placeholder="Name" required></input>
 					<input type="email" class="email" name="email" placeholder="your.email@example.com" required></input>
 					<textarea class="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
@@ -124,5 +156,165 @@
 			</footer>
 		</section>
 
+	<div>
+	<!------ Project pop-up ------>
+	<dialog class="project-modal" id="volleyball-modal">
+		<button class="close-modal" aria-label="Close project">x</button>
+
+		<div class="modal-content">
+			<h2>Volleyball Database</h2>
+			<p>Design and implement a database web site for managing the operations of a volleyball club.</p>
+
+			<div class="project-gallery">
+				<img src="../static/images/volley_web.gif" alt="Project demonstration">
+			</div>
+
+			<a
+				class="github-button"
+				href="https://github.com/andremagda/Volleyball_DataBase_App"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				View on GitHub
+			</a>
+		</div>
+	</dialog>
+
+	<dialog class="project-modal" id="hrPlatform-modal">
+		<button class="close-modal" aria-label="Close project">x</button>
+
+		<div class="modal-content">
+			<h2>Training Platform</h2>
+			<p>Project in progress</p>
+
+			<!-- <div class="project-gallery">
+				<img src="../static/images/" alt="Project in progress">
+			</div> -->
+
+			<a
+				class="github-button"
+				href="https://github.com/andremagda/Training-Platform"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				View on GitHub
+			</a>
+		</div>
+	</dialog>
+
+	<dialog class="project-modal" id="carDelership-modal">
+		<button class="close-modal" aria-label="Close project">x</button>
+
+		<div class="modal-content">
+			<h2>Car Dealership</h2>
+			<p>The Car Dealership System simulates the management of a car dealership, 
+				allowing users to perform various operations such as adding, removing, selling, 
+				and editing vehicles within the dealership's inventory. The system also maintains a 
+				sales history to track all vehicle transactions.</p>
+
+			<div class="project-gallery">
+				<img src="../static/images/carDealership_video.mov" alt="Project demonstration">
+			</div>
+
+			<a
+				class="github-button"
+				href="https://github.com/RonikaP/MyCarDealershipSystem"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				View on GitHub
+			</a>
+		</div>
+	</dialog>
+
+	<dialog class="project-modal" id="textIndexer-modal">
+		<button class="close-modal" aria-label="Close project">x</button>
+
+		<div class="modal-content">
+			<h2>Text Indexer File</h2>
+			<p>A C++ terminal app that indexes text files and supports word searches.</p>
+			
+			<!-- <div class="project-gallery">
+				<img src="../static/images/" alt="Project demonstration">
+			</div> -->
+
+			<a
+				class="github-button"
+				href="https://github.com/andremagda/Text_File_Indexer"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				View on GitHub
+			</a>
+		</div>
+	</dialog>
+
+	<dialog class="project-modal" id="cavas-modal">
+		<button class="close-modal" aria-label="Close project">x</button>
+
+		<div class="modal-content">
+			<h2>CANVAS-POLYMORPHISM-INHERITANCE</h2>
+			<p>A C++ terminal application that renders geometric shapes on a text-based canvas using inheritance, polymorphism, exception handling, and the Rule of Five.</p>
+
+			<div class="project-gallery">
+				<img src="../static/images/canvas_house.png" alt="Project demonstration">
+			</div>
+
+			<a
+				class="github-button"
+				href="https://github.com/andremagda/Canvas-Polymorphism"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				View on GitHub
+			</a>
+		</div>
+	</dialog>
+
+	<dialog class="project-modal" id="">
+		<button class="close-modal" aria-label="Close project">x</button>
+
+		<div class="modal-content">
+			<h2></h2>
+			<p> </p>
+
+			<div class="project-gallery">
+				<img src="../static/images/" alt="Project demonstration">
+			</div>
+
+			<a
+				class="github-button"
+				href="https://github.com/andremagda/"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				View on GitHub
+			</a>
+		</div>
+	</dialog>
+
+	<!-- <dialog class="project-modal" id="">
+		<button class="close-modal" aria-label="Close project">x</button>
+
+		<div class="modal-content">
+			<h2></h2>
+			<p> </p>
+
+			<div class="project-gallery">
+				<img src="../static/images/" alt="Project demonstration">
+			</div>
+
+			<a
+				class="github-button"
+				href="https://github.com/andremagda/"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				View on GitHub
+			</a>
+		</div>
+	</dialog> -->
+
+	</div>
 	</body>
 </html>

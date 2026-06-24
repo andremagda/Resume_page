@@ -24,3 +24,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+
+document.querySelectorAll(".project[data-modal]").forEach((project) => {
+  project.addEventListener("click", () => {
+    const modal = document.getElementById(project.dataset.modal);
+    modal?.showModal();
+  });
+});
+
+document.querySelectorAll(".close-modal").forEach((button) => {
+  button.addEventListener("click", () => {
+    button.closest("dialog")?.close();
+  });
+});
